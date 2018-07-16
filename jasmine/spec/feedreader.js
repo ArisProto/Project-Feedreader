@@ -52,7 +52,7 @@ $(function() {
            allFeeds.forEach(function(feed) {
              feedName = feed.name;    // var declared in app.js
 
-             expect(feedName.length).not.toBe(0);
+             expect(feedName.length).not.toBe(0);   // anything more than nothing is nice :)
              expect(feedName).toBeDefined();
            });
          });
@@ -72,7 +72,7 @@ $(function() {
          */
 
          it('Menu is hidden' function() {
-          expect($(document.body).hasClass('menu-hidden')).toBe(true);
+          expect($(document.body).hasClass('menu-hidden')).toBe(true);    // checks the class to make sure the menu is hidden
          });
 
          /* TODO: Write a test that ensures the menu changes
