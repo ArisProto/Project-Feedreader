@@ -37,9 +37,12 @@ $(function() {
             var UrlR = (https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9]\.[^\s]{2,});
             var UrlFeed = feed.url;
 
-            expect(UrlFeed.length).not.toBe(0);   // we want the Url to consist of something
+            // we want the Url to consist of something
+            expect(UrlFeed.length).not.toBe(0);
             expect(UrlFeed).toBeDefined();
-            expect(allFeeds[i].url).toMatch(UrlR);    // match the Url to the characters above
+
+            // match the Url to the characters above
+            expect(allFeeds[i].url).toMatch(UrlR);
           });
         });
 
@@ -50,9 +53,12 @@ $(function() {
 
          it('Names are defined', function() {
            allFeeds.forEach(function(feed) {
-             feedName = feed.name;    // var declared in app.js
 
-             expect(feedName.length).not.toBe(0);   // anything more than nothing is nice :)
+             // var declared in app.js
+             feedName = feed.name;
+
+             // anything more than nothing is nice :)
+             expect(feedName.length).not.toBe(0);
              expect(feedName).toBeDefined();
            });
          });
@@ -70,7 +76,9 @@ $(function() {
          */
 
          it('Menu is hidden' function() {
-          expect($(document.body).hasClass('menu-hidden')).toBe(true);    // checks the class to make sure the menu is hidden
+
+          // checks the class to make sure the menu is hidden
+          expect($(document.body).hasClass('menu-hidden')).toBe(true);
          });
 
          /* TODO: Write a test that ensures the menu changes
@@ -81,6 +89,11 @@ $(function() {
 
           it('Menu toggleability', function() {
 
+            $('a.menu-icon-link').click();
+            expect(document.body.className).not.toBe('menu-hidden');
+
+            $('a.menu-icon-link').click();
+            expect(document.body.className).toBe('menu-hidden');
           });
       });
 
