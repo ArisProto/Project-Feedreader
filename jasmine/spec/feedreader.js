@@ -66,6 +66,10 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
 
+          it('Menu toggleability', function() {
+
+          };
+
     /* TODO: Write a new test suite named "Initial Entries" */
 
         /* TODO: Write a test that ensures when the loadFeed
