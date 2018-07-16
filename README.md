@@ -8,7 +8,7 @@ In order to run the application just download the zip-file (from my Github repos
 
 Alternatively you can just follow this link: https://arisproto.github.io/Project-Feedreader/
 
-# Steps that were underwent to complete this project!
+## Steps that were underwent to complete this project!
 
 These were the steps we had to work through inorder to successfully complete the project!
 
