@@ -91,7 +91,7 @@ $(function() {
        * the use of Jasmine's beforeEach and asynchronous done() function.
        */
 
-      it('At least 1 new feed entry', function() {
+      it('At least 1 new feed entry', function(done) {
 
         // yet again anything more than nothing is nice/necessary :)
         expect($('.entry h2').length).not.toBe([0]);
@@ -116,7 +116,7 @@ $(function() {
       * Remember, loadFeed() is asynchronous.
       */
 
-      it('changing content', function() {
+      it('changing content', function(done) {
         window.loadFeed(1, function() {
 
           expect($('.feed').html() !== previousContent).toBeTruthy();
