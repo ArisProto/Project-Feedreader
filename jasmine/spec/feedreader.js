@@ -32,11 +32,19 @@ $(function() {
          * and that the URL is not empty.
          */
 
+        it('Url is defined and not empty', function() {
+
+        });
 
         /* TODO: Write a test that loops through each feed
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
+
+         it('Names are defined', function() {
+
+         });
+
     });
 
 
