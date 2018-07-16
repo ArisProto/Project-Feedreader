@@ -2,6 +2,7 @@ $(function() {
 
   describe('RSS Feeds', function() {
     it('are defined', function() {
+
       expect(allFeeds).toBeDefined();
       expect(allFeeds.length).not.toBe(0);
     });
@@ -89,13 +90,13 @@ $(function() {
        * the use of Jasmine's beforeEach and asynchronous done() function.
        */
 
-       it('At least 1 new feed entry', function() {
+      it('At least 1 new feed entry', function() {
 
-         // yet again anything more than nothing is nice/necessary :)
-         expect($('.entry h2').length).not.toBe([0]);
-         done();
-     });
-   });
+        // yet again anything more than nothing is nice/necessary :)
+        expect($('.entry h2').length).not.toBe([0]);
+        done();
+      });
+    });
 
     /* TODO: Write a new test suite named "New Feed Selection" */
 
@@ -110,17 +111,17 @@ $(function() {
       });
 
       /* TODO: Write a test that ensures when a new feed is loaded
-       * by the loadFeed function that the content actually changes.
-       * Remember, loadFeed() is asynchronous.
-       */
+      * by the loadFeed function that the content actually changes.
+      * Remember, loadFeed() is asynchronous.
+      */
 
-       it('changing content', function() {
-         window.loadFeed(1, function() {
+      it('changing content', function() {
+        window.loadFeed(1, function() {
 
-           expect($('.feed').html() !== oldContent).toBeTruthy();
-           done();
-         });
-       });
-     });
+          expect($('.feed').html() !== oldContent).toBeTruthy();
+          done();
+        });
+      });
+    });
 
 }());
