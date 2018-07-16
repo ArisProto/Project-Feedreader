@@ -35,7 +35,11 @@ $(function() {
         it('Url is defined and not empty', function() {
           allFeeds.forEach(function (feed, i) {
             var UrlR = (https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9]\.[^\s]{2,});
+            var UrlFeed = feed.url;
 
+            expect(UrlFeed.length).not.toBe(0);   // we want the Url to consist of something
+            expect(UrlFeed).toBeDefined();
+            expect(allFeeds[i].url).toMatch(UrlR);
           });
         });
 
