@@ -6,7 +6,7 @@ This is the fifth project of my Udacity Front-End-Web-Development Nanodegree. Ai
 
 In order to run the application just download the zip-file (from my Github repository), unzip, and then run the index.html file.
 
-Alternatively you can just follow this link: https://arisproto.github.io/Project-Feedreader/
+Don't try to run the application following the link provided in the repository. It will fail due to it requesting an insecure script, which Github will block.
 
 ## Steps that were underwent to complete this project!
 
