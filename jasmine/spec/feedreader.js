@@ -123,12 +123,10 @@ $(function() {
        * Remember, loadFeed() is asynchronous.
        */
 
-       it('Content change', function() {
+       it('changing content', function() {
          window.loadFeed(1, function() {
+
            expect($('.feed').html() !== oldContent).toBeTruthy();
-           done();
-           // once again anything more than nothing is nice/necessary :)
-           expect($('.entry h2').length).not.toBe([0]);
            done();
          });
        });
