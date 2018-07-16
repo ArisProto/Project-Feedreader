@@ -80,7 +80,7 @@ $(function() {
          */
 
          it('At least 1 new feed entry', function() {
-           
+
          });
 
     /* TODO: Write a new test suite named "New Feed Selection" */
@@ -90,6 +90,8 @@ $(function() {
          * Remember, loadFeed() is asynchronous.
          */
 
-         it('')
+         it('Content change', function() {
+
+         });
 
 }());
