@@ -104,16 +104,19 @@ $(function() {
 
        it('At least 1 new feed entry', function() {
 
+         // yet again anything more than nothing is nice/necessary :)
+         expect($('.entry h2').length).not.toBe([0]);
+         done();
      });
 
     /* TODO: Write a new test suite named "New Feed Selection" */
 
     describe('New Feed Selection', function() {
-      var oldContent;
+      var previousContent;
 
       beforeEach(function(done) {
         window.loadFeed(0, function() {
-          oldContent = $('.feed').html();
+          previousContent = $('.feed').html();
           done();
         });
       });
