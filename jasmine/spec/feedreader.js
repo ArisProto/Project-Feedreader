@@ -67,7 +67,7 @@ $(function() {
       * clicked and does it hide when clicked again.
       */
 
-      it('Menu toggleability', function() {
+      it('Menu is toggleable', function() {
 
         $('a.menu-icon-link').click();
         expect(document.body.className).not.toContain('menu-hidden');
