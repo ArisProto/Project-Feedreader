@@ -14,7 +14,8 @@ $(function() {
 
     it('Url is defined and not empty', function() {
       allFeeds.forEach(function (feed, i) {
-        var UrlR = (https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9]\.[^\s]{2,});
+        var UrlR = /^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/;
+
         var UrlFeed = feed.url;
 
         // we want the Url to consist of something
@@ -54,7 +55,7 @@ $(function() {
       * hiding/showing of the menu element.
       */
 
-     it('Menu is hidden' function() {
+     it('Menu is hidden', function() {
 
        // checks the class to make sure the menu is hidden
        expect($(document.body).hasClass('menu-hidden')).toBe(true);
@@ -69,10 +70,10 @@ $(function() {
       it('Menu toggleability', function() {
 
         $('a.menu-icon-link').click();
-        expect(document.body.className).not.toBe('menu-hidden');
+        expect(document.body.className).not.toContain('menu-hidden');
 
         $('a.menu-icon-link').click();
-        expect(document.body.className).toBe('menu-hidden');
+        expect(document.body.className).toContain('menu-hidden');
       });
     });
 
