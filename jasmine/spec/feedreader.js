@@ -51,6 +51,9 @@ $(function() {
          it('Names are defined', function() {
            allFeeds.forEach(function(feed) {
              feedName = feed.name;    // var declared in app.js
+
+             expections(feedName.length).not.toBe(0);
+             expections(feedName).toBeDefined();
            })
          });
 
