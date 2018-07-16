@@ -119,7 +119,7 @@ $(function() {
       it('changing content', function() {
         window.loadFeed(1, function() {
 
-          expect($('.feed').html() !== oldContent).toBeTruthy();
+          expect($('.feed').html() !== previousContent).toBeTruthy();
           done();
         });
       });
