@@ -39,7 +39,7 @@ $(function() {
 
             expect(UrlFeed.length).not.toBe(0);   // we want the Url to consist of something
             expect(UrlFeed).toBeDefined();
-            expect(allFeeds[i].url).toMatch(UrlR);
+            expect(allFeeds[i].url).toMatch(UrlR);    // match the Url to the characters above
           });
         });
 
