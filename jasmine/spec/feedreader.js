@@ -57,7 +57,7 @@ $(function() {
              // var declared in app.js
              feedName = feed.name;
 
-             // anything more than nothing is nice :)
+             // anything more than nothing is nice/necessary :)
              expect(feedName.length).not.toBe(0);
              expect(feedName).toBeDefined();
            });
@@ -101,8 +101,6 @@ $(function() {
 
     describe('Initial Entries', function() {
 
-    });
-
         /* TODO: Write a test that ensures when the loadFeed
          * function is called and completes its work, there is at least
          * a single .entry element within the .feed container.
@@ -112,7 +110,11 @@ $(function() {
 
          it('At least 1 new feed entry', function() {
 
+           // once again anything more than nothing is nice/necessary :)
+           expect($('.entry h2').length).not.toBe([0]);
+           done();
          });
+     });
 
     /* TODO: Write a new test suite named "New Feed Selection" */
 
