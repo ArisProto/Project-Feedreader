@@ -52,8 +52,8 @@ $(function() {
            allFeeds.forEach(function(feed) {
              feedName = feed.name;    // var declared in app.js
 
-             expections(feedName.length).not.toBe(0);
-             expections(feedName).toBeDefined();
+             expect(feedName.length).not.toBe(0);
+             expect(feedName).toBeDefined();
            });
          });
 
@@ -62,7 +62,7 @@ $(function() {
     /* TODO: Write a new test suite named "The menu" */
 
     describe('The menu', function() {
-      
+
     });
 
         /* TODO: Write a test that ensures the menu element is
@@ -72,7 +72,7 @@ $(function() {
          */
 
          it('Menu is hidden' function() {
-
+          expect($(document.body).hasClass('menu-hidden')).toBe(true);
          });
 
          /* TODO: Write a test that ensures the menu changes
