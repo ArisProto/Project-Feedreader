@@ -78,7 +78,7 @@ $(function() {
 
       it('At least 1 new feed entry', function() {
         var entryList= document.querySelectorAll('.feed .entry');
-        expect(entryList.length).toBeGreaterThan('0');
+        expect(entryList.length).toBeGreaterThan(0);
       });
     });
 
@@ -99,7 +99,7 @@ $(function() {
       it('changing content', function(done) {
         window.loadFeed(1, function() {
 
-          expect($('.feed').html() !== previousContent).toBeTruthy();
+          expect($('.feed').html()).not.toEqual(previousContent);
           done();
         });
       });
