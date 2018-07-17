@@ -80,8 +80,13 @@ $(function() {
     /* TODO: Write a new test suite named "Initial Entries" */
 
     describe('Initial Entries', function() {
-      beforeEach(function (done) {
-        loadFeed(0, done);
+      beforeEach(function(done){
+        loadFeed(0, function(){
+          console.log($('.feed').html());
+          
+          //signals 'beforeEach' has finished all its asynchronous tasks
+          done();
+        });
       });
 
       /* TODO: Write a test that ensures when the loadFeed
@@ -91,11 +96,10 @@ $(function() {
        * the use of Jasmine's beforeEach and asynchronous done() function.
        */
 
-      it('At least 1 new feed entry', function(done) {
-
-        // yet again anything more than nothing is nice/necessary :)
-        expect($('.entry h2').length).not.toBe([0]);
-        done();
+      it('At least 1 new feed entry', function() {
+        var entryList= document.querySelectorAll('.feed .entry');
+        expect(entryList.length).toBeGreaterThan('0');
+        console.log(entryList.length);
       });
     });
 
