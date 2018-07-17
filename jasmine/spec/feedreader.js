@@ -68,7 +68,6 @@ $(function() {
     describe('Initial Entries', function() {
       beforeEach(function(done){
         loadFeed(0, function(){
-          console.log($('.feed').html());
 
           //signals 'beforeEach' has finished all its asynchronous tasks
           done();
@@ -80,7 +79,6 @@ $(function() {
       it('At least 1 new feed entry', function() {
         var entryList= document.querySelectorAll('.feed .entry');
         expect(entryList.length).toBeGreaterThan('0');
-        console.log(entryList.length);
       });
     });
 
