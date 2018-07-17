@@ -99,7 +99,7 @@ $(function() {
       it('changing content', function(done) {
         window.loadFeed(1, function() {
 
-          expect($('.feed').html()).not.toEqual(previousContent);
+          expect($('.feed').html()).not.toEqual(previousContent);  // Thank you Udacity reviewer :)
           done();
         });
       });
